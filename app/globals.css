@@ -1,0 +1,67 @@
+/* imports */
+@import "tailwindcss";
+/* config file */
+@config "../tailwind.config.mts";
+/*
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/ */
+
+.light {
+	--header: 21 32 53;
+	--primary: 245 245 245;
+	--secondary: 242 242 242;
+	--accent: 63 128 177;
+	--yellow: 184 153 106;
+	--content: 25 25 25;
+	--search: 25 25 25;
+	--alert: 220 38 38;
+	--disable: 127 127 127;
+	--info: 67 120 208;
+	--hazard: 241 90 34;
+	--cancel: 127 127 127;
+	--warning: 177 130 47;
+	--delete: 249 105 14;
+	/* lighter purple */
+	--purple: 213 184 255;
+	--line: 255 255 255;
+}
+.dark {
+	--header: 255 255 255;
+	--primary: 26 26 26;
+	--secondary: 0 0 0;
+	--accent: 254 241 96;
+	--yellow: 184 153 106;
+	--content: 255 255 255;
+	--search: 255 255 255;
+	--alert: 220 38 38;
+	--disable: 127 127 127;
+	--info: 67 120 208;
+	--hazard: 241 90 34;
+	--cancel: 127 127 127;
+	--warning: 177 130 47;
+	--delete: 249 105 14;
+	/* darker purple */
+	--purple: 102 51 153;
+	--line: 255 255 255;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+	}
+} */
+@layer base {
+	body {
+		@apply text-content bg-primary font-Fira;
+	}
+	.container {
+		@apply max-w-[1000px] p-2 md:p-4 w-full mx-auto md:px-[1rem] px-7
+    /*
+    xs: 480px,
+    sm: 960px,
+    md: 1280px,
+    lg: 1920px,
+    xl: 3840px */;
+	}
+}
