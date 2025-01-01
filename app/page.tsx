@@ -1,18 +1,30 @@
-import Image from "next/image";
-import { metadata } from "./layout";
+"use client";
+
+import Grid from "@/components/Grid";
+import Hero from "@/components/Hero";
+import { FloatingNav } from "@/components/ui/FloatingNav";
+import { navItems } from "@/data";
 
 export default function Home() {
+	// const { store, dispatch } = React.useContext(StoreContext);
+	// console.log(store.message)S;
+	// const handleClickThis = () => {
+	// 	dispatch(setMessage("ingram"));
+	// 	console.log(store.message);
+	// };
+
 	return (
 		<>
-			<main className='h-screen w-full overflow-hidden bg-primary'>
-				<section
-					id='heroHome'
-					className='flex items-center gap-5 justify-center py-10'>
-					<div className='light:bg-blue-400'>
-						<h1 className='font-fira text-2xl'>{metadata?.information}</h1>
-						<h1 className='font-fira text-2xl'>{metadata?.description}</h1>
+			<main className='relative bg-primary flex justify-center items-center flex-col text-center'>
+				<div className='max-w-7xl w-full'>
+					<Hero />
+
+					<FloatingNav navItems={navItems} />
+					<div className='h-screen'>
+						<Grid />
+						{/* <button onClick={handleClickThis}>Click me Now</button> */}
 					</div>
-				</section>
+				</div>
 			</main>
 		</>
 	);

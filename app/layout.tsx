@@ -1,10 +1,23 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
-import { Fira_Code, Geist, Geist_Mono } from "next/font/google";
+import {
+	Dela_Gothic_One,
+	Fira_Code,
+	Geist,
+	Geist_Mono,
+	Gothic_A1,
+} from "next/font/google";
 import "./globals.css";
 
 const fira = Fira_Code({
 	variable: "--font-Fira-Code",
 	subsets: ["latin"],
+});
+const heading = Gothic_A1({
+	weight: "400",
+});
+const heading2 = Dela_Gothic_One({
+	weight: "400",
 });
 
 const geistSans = Geist({
@@ -20,7 +33,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "NextJs Portfolio",
 	description: "Modern and Minimalist",
-	information: "The NextJs Portfolio",
 };
 
 export default function RootLayout({
@@ -29,11 +41,26 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
+		<html
+			lang='en'
+			suppressHydrationWarning>
+			{/* <head>
+				<link
+					rel='icon'
+					type='image/svg+xml'
+					href='/public/cloud.svg'
+				/>
+			</head> */}
+
 			<body
-				id='dark'
-				className={`dark ${geistSans.variable} ${geistMono.variable} ${fira.variable} antialiased`}>
-				{children}
+				className={`${geistSans.variable} ${geistMono.variable} ${heading} ${heading2} ${fira.variable} antialiased`}>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='dark'
+					enableSystem
+					disableTransitionOnChange>
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	);
