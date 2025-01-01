@@ -47,7 +47,7 @@
 } */
 @layer base {
 	* {
-		@apply overflow-x-hidden;
+		@apply overflow-x-hidden transition-all duration-100;
 	}
 	body {
 		@apply text-content bg-content font-Fira overflow-hidden;
@@ -61,8 +61,92 @@
     lg: 1920px,
     xl: 3840px */;
 	}
+
+	a {
+		@apply no-underline;
+	}
+
+	ul {
+		@apply list-none text-content;
+	}
+
+	img {
+		@apply block bg-cover;
+	}
+	/* Headers */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-DelaGothicOne text-content;
+		/* font-playfairB  */
+	}
+
+	h1 {
+		@apply text-4xl mb-4;
+	}
+
+	h2 {
+		@apply text-3xl mb-4;
+	}
+
+	h3 {
+		@apply text-2xl mb-2;
+	}
+
+	h4 {
+		@apply text-xl mb-4;
+	}
+
+	h5 {
+		@apply text-sm mb-2;
+	}
+	/* Paragraph */
+	p {
+		@apply mb-2 text-content !leading-6;
+	}
+	/* Tables */
+	table {
+		@apply w-full text-base font-Fira border-2 border-info dark:border-accent
+    /* font-playfairR */;
+	}
+
+	table thead tr th {
+		@apply p-3 border-x border-t border-content/10 font-Fira text-center
+    /* font-playfairB */;
+	}
+
+	table tbody tr td {
+		@apply p-3 border-b border-x border-content/10 text-center;
+	}
+
+	table tbody tr:nth-child(odd) {
+		@apply bg-info/50 dark:bg-accent/50;
+	}
+
+	table tbody tr {
+		@apply w-auto;
+	}
+
+	.td-post {
+		@apply text-balance text-center;
+	}
+
+	main {
+		@apply transition-all duration-500;
+	}
+	button {
+		@apply cursor-crosshair focus:outline-none focus:border-none focus:ring-0;
+	}
+}
+@layer components {
 }
 @layer utilities {
+	.magic-btn {
+		@apply focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50;
+	}
 	input::-webkit-outer-spin-button,
 	input::-webkit-inner-spin-button {
 		-webkit-appearance: none;

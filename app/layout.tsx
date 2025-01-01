@@ -44,14 +44,6 @@ export default function RootLayout({
 		<html
 			lang='en'
 			suppressHydrationWarning>
-			{/* <head>
-				<link
-					rel='icon'
-					type='image/svg+xml'
-					href='/public/cloud.svg'
-				/>
-			</head> */}
-
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${heading} ${heading2} ${fira.variable} antialiased`}>
 				<ThemeProvider

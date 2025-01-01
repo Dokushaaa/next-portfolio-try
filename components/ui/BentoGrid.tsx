@@ -40,7 +40,7 @@ export const BentoGridItem = ({
 	spareImg?: string;
 	imgAlt?: string;
 }) => {
-	console.log(`${`Bento-${id}`}`);
+	// console.log(`${`Bento-${id}`}`);
 	return (
 		<div
 			className={cn(

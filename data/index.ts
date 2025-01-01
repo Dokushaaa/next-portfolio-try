@@ -5,6 +5,8 @@ export const navItems = [
 	{ name: "Contact", link: "#contact" },
 ];
 
+
+
 // grid items
 let counter = 1;
 export const gridItems = [
