@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import { Providers } from "@/global/Provider";
 import type { Metadata } from "next";
 import {
 	Dela_Gothic_One,
@@ -46,13 +47,15 @@ export default function RootLayout({
 			suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${heading} ${heading2} ${fira.variable} antialiased`}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='dark'
-					enableSystem
-					disableTransitionOnChange>
-					{children}
-				</ThemeProvider>
+				<Providers>
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='dark'
+						enableSystem
+						disableTransitionOnChange>
+						{children}
+					</ThemeProvider>
+				</Providers>
 			</body>
 		</html>
 	);

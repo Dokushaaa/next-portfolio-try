@@ -1,12 +1,12 @@
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
-import yourReducer from "./yourSlice"; // Import your slice reducer
+import counterReducer from "./features/counter/CounterSlice";
 
 export const store = configureStore({
 	reducer: {
-		yourFeature: yourReducer, // replace with your actual reducer
+		counter: counterReducer,
 	},
 });
 
-// Optional: Type for RootState and AppDispatch for type-safe access
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

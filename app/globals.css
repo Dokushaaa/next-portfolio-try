@@ -144,6 +144,9 @@
 @layer components {
 }
 @layer utilities {
+	.thisButton {
+		@apply border-2 border-solid border-black mx-2 px-5 bg-info rounded-md py-2;
+	}
 	.magic-btn {
 		@apply focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50;
 	}
