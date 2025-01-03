@@ -7,9 +7,10 @@ import {
 	Geist_Mono,
 	Gothic_A1,
 } from "next/font/google";
-import { Provider } from "react-redux";
+
 import "./globals.css";
-import { Providers } from "@/global-storage/redux/Provider";
+import { ReduxProviders } from "@/global-storage/redux/Provider";
+import { StoreProvider } from "@/global-storage/store/StoreContext";
 
 const fira = Fira_Code({
 	variable: "--font-Fira-Code",
@@ -50,19 +51,19 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${heading} ${heading2} ${fira.variable} antialiased`}>
 				{/* store */}
-				<Providers>
-					{/* <StoreProvider> */}
-					{/* lightmode */}
-					<ThemeProvider
-						attribute='class'
-						defaultTheme='dark'
-						themes={["light", "dark"]}
-						enableSystem
-						disableTransitionOnChange>
-						{children}
-					</ThemeProvider>
-				</Providers>
-				{/* </StoreProvider> */}
+				<ReduxProviders>
+					<StoreProvider>
+						{/* lightmode */}
+						<ThemeProvider
+							attribute='class'
+							defaultTheme='dark'
+							themes={["light", "dark"]}
+							enableSystem
+							disableTransitionOnChange>
+							{children}
+						</ThemeProvider>
+					</StoreProvider>
+				</ReduxProviders>
 			</body>
 		</html>
 	);

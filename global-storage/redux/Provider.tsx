@@ -2,7 +2,7 @@
 import { Provider } from "react-redux";
 import { store } from "./ReduxStore";
 
-export function Providers({
+export function ReduxProviders({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
