@@ -40,5 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+#apiKeys:
+# /components/functions/apiKey.tsx
+apiKey.**
+
 #custom 
 /global/redux-old
+/components/functions/svg/*.svg

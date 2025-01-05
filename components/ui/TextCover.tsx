@@ -6,9 +6,13 @@ import { cn } from "@/lib/utils";
 import { SparklesCore } from "./Sparkles";
 
 export const Cover = ({
+	colorBg,
+	colorText,
 	children,
 	className,
 }: {
+	colorBg?: string;
+	colorText?: string;
 	children?: React.ReactNode;
 	className?: string;
 }) => {

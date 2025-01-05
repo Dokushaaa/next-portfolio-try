@@ -1,9 +1,8 @@
 import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { FaLocationArrow } from "react-icons/fa";
-import { Cover } from "./ui/TextCover";
 
 const Hero = ({
 	titleWords,
@@ -19,6 +18,7 @@ const Hero = ({
 	return (
 		<>
 			{/* defines spotlights */}
+
 			<div className='py-24'>
 				<div className='spotlights-container'>
 					<Spotlight

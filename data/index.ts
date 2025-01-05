@@ -5,7 +5,12 @@ export const navItems = [
 	{ name: "Contact", link: "#contact" },
 ];
 
-
+export const imgData = [
+	{
+		name: "Electro Vision",
+		source: `../utils/electroVision.png`,
+	},
+];
 
 // grid items
 let counter = 1;

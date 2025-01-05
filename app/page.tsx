@@ -1,11 +1,13 @@
 "use client";
+import LightMode from "@/components/functions/LightMode";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
+import { Cover } from "@/components/ui/TextCover";
 import { navItems } from "@/data";
 import { heroArray } from "@/data/content";
-import { setMessage } from "@/global-storage/redux/features/func/ReduxActions";
-import { RootState } from "@/global-storage/redux/ReduxStore";
+import { setMessage } from "@/global/redux/actions/ReduxActions";
+import { RootState } from "@/global/redux/ReduxStore";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
@@ -51,6 +53,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+				<LightMode />
 			</main>
 		</>
 	);

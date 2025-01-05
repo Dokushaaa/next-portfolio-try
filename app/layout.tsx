@@ -9,8 +9,8 @@ import {
 } from "next/font/google";
 
 import "./globals.css";
-import { ReduxProviders } from "@/global-storage/redux/Provider";
-import { StoreProvider } from "@/global-storage/store/StoreContext";
+import { ReduxProviders } from "@/global/redux/Provider";
+import { StoreProvider } from "@/global/store/StoreContext";
 
 const fira = Fira_Code({
 	variable: "--font-Fira-Code",
