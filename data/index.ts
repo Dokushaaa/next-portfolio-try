@@ -12,6 +12,34 @@ export const imgData = [
 	},
 ];
 
+export const cardStackItems = [
+	{
+		// id: number; name: string; designation: string; content: React.ReactNode;
+		id: 1,
+		name: "Franchesca Roces",
+		designation: "Autistic",
+		content: "From Here",
+	},
+	{
+		id: 2,
+		name: "Charles Da",
+		designation: "Rat-King",
+		content: "From Here",
+	},
+	{
+		id: 3,
+		name: "Kyle Alcantara",
+		designation: "SeaMan",
+		content: "From Here",
+	},
+	{
+		id: 4,
+		name: "Mae Eullaran",
+		designation: "Scheming Patatas",
+		content: "From Here",
+	},
+];
+
 // grid items
 let counter = 1;
 export const gridItems = [

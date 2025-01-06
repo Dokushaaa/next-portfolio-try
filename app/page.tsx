@@ -1,12 +1,12 @@
 "use client";
 import ScrollToTop from "@/components/functions/ScrollToTop";
-import CustomLogo from "@/components/functions/svg/CustomLogo";
 import ThemeMode from "@/components/functions/ThemeMode";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Toast from "@/components/modals/Toast";
+import { CardStack } from "@/components/ui/CardStack";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { navItems } from "@/data";
+import { cardStackItems, navItems } from "@/data";
 import { heroArray } from "@/data/content";
 import { setMessage, setSuccess } from "@/global/store/StoreAction";
 import { StoreContext } from "@/global/store/StoreContext";
@@ -52,6 +52,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
+					<CardStack items={cardStackItems} />
 				</div>
 				<ThemeMode />
 			</main>
