@@ -1,26 +1,27 @@
 "use client";
-import LightMode from "@/components/functions/LightMode";
+import ScrollToTop from "@/components/functions/ScrollToTop";
+import ThemeMode from "@/components/functions/ThemeMode";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import Toast from "@/components/modals/Toast";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { Cover } from "@/components/ui/TextCover";
 import { navItems } from "@/data";
 import { heroArray } from "@/data/content";
-import { setMessage } from "@/global/redux/actions/ReduxActions";
-import { RootState } from "@/global/redux/ReduxStore";
-import { useDispatch, useSelector } from "react-redux";
+import { setMessage, setSuccess } from "@/global/store/StoreAction";
+import { StoreContext } from "@/global/store/StoreContext";
+import React from "react";
 
 export default function Home() {
-	const count = useSelector((state: RootState) => state.mainRedux.message);
-	const dispatch = useDispatch();
-	console.log("count bool:", count);
-	const handleAddMessage = () => {
-		dispatch(setMessage("hi there"));
-	};
-	const handleDelMessage = () => {
-		dispatch(setMessage(""));
-	};
+	const { store, dispatch } = React.useContext(StoreContext);
 
+	const loremMessage2 = "setMessage";
+	const handleButtonSuccess = () => {
+		dispatch(setSuccess(true));
+		dispatch(setMessage(loremMessage2));
+	};
+	const handleButtonSuccessOff = () => {
+		dispatch(setSuccess(false));
+	};
 	return (
 		<>
 			<main className='relative bg-primary flex justify-center items-center flex-col text-center'>
@@ -39,22 +40,28 @@ export default function Home() {
 							<div className='flex items-center'>
 								<button
 									className='thisButton'
-									onClick={handleAddMessage}>
+									onClick={handleButtonSuccess}>
 									Add
 								</button>
 								<button
 									className='thisButton'
-									onClick={handleDelMessage}>
-									Close
+									onClick={handleButtonSuccessOff}>
+									Off
 								</button>
 							</div>
-
-							{count ? <>has message</> : <>has no msg</>}
 						</div>
 					</div>
 				</div>
-				<LightMode />
+				<ThemeMode />
 			</main>
+			<ScrollToTop />
+
+			{store.success && (
+				<Toast
+					type='xl'
+					toastDuration={3000}
+				/>
+			)}
 		</>
 	);
 }

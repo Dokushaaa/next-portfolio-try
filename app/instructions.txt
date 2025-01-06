@@ -1,0 +1,44 @@
+redux mode:
+const count = useSelector((state: RootState) => state.mainRedux.message);
+	const dispatch = useDispatch();
+	console.log("count bool:", count);
+	const handleAddMessage = () => {
+		dispatch(setMessage("hi there"));
+	};
+	const handleDelMessage = () => {
+		dispatch(setMessage(""));
+	};
+    	<button
+            className='thisButton'
+            onClick={handleDelMessage}>
+            Close
+		</button>
+
+store mode:
+	const { store, dispatch } = useContext(StoreContext);
+	const handleButtonSuccess = () => {
+		dispatch(setSuccess(true));
+		dispatch(setMessage("This is the message"));
+	};
+
+enabler:
+		<button
+            className='thisButton'
+            onClick={handleButtonSuccess}>
+            Add
+		</button>
+
+
+	if (type == "normal") {
+		React.useEffect(() => {
+			setTimeout(() => {
+				dispatch(setSuccess(false));
+			}, 1000);
+		}, []);
+	} else if (type == "xl" && toastDuration == 1) {
+		React.useEffect(() => {
+			setTimeout(() => {
+				dispatch(setSuccess(false));
+			}, 3000);
+		}, []);
+	}

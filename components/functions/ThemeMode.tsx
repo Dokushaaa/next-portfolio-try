@@ -2,7 +2,7 @@
 import MiniLogo from "@/components/functions/svg/MiniLogo";
 import React from "react";
 
-const LightMode = () => {
+const ThemeMode = () => {
 	function handleChangeColorTheme() {
 		const body = document.querySelector("body");
 		const currentTheme = localStorage.getItem("theme");
@@ -39,4 +39,4 @@ const LightMode = () => {
 	);
 };
 
-export default LightMode;
+export default ThemeMode;

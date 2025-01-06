@@ -137,8 +137,13 @@
 	main {
 		@apply transition-all duration-500;
 	}
-	button {
-		@apply cursor-crosshair focus:outline-none focus:border-none focus:ring-0;
+
+	#progressTop {
+		@apply fixed xl:bottom-[35px] bottom-[25px] xl:right-[35px] right-[25px] h-[70px] w-[70px] opacity-0 grid place-items-center rounded-full z-[100] cursor-pointer shadow-md;
+	}
+
+	#progressTop-value {
+		@apply block h-[calc(100%-15px)] w-[calc(100%-15px)] bg-primary rounded-full grid place-items-center text-[35px];
 	}
 }
 @layer components {
