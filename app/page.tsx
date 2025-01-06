@@ -1,5 +1,6 @@
 "use client";
 import ScrollToTop from "@/components/functions/ScrollToTop";
+import CustomLogo from "@/components/functions/svg/CustomLogo";
 import ThemeMode from "@/components/functions/ThemeMode";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
@@ -59,7 +60,7 @@ export default function Home() {
 			{store.success && (
 				<Toast
 					type='xl'
-					toastDuration={3000}
+					toastDuration={1000}
 				/>
 			)}
 		</>

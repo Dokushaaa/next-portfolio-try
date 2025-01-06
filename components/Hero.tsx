@@ -3,7 +3,6 @@ import { FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import ScrollToTop from "./functions/ScrollToTop";
 
 const Hero = ({
 	titleWords,
@@ -60,15 +59,17 @@ const Hero = ({
 							className='text-center text-[40px] md:text-5xl lg:text-6xl'
 							words={`${titleWords}`}
 						/>
-						<p className='text-cetnter md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
+						<p className='text-cetnter md:tracking-wider text-sm md:text-lg lg:text-2xl py-2'>
 							{spanWords}
 						</p>
 
-						<Link href='#about'>
+						<Link
+							href='#about'
+							className='md:mt-10'>
 							<MagicButton
 								buttonText={"About Me"}
 								btnType='shimmer'
-								modClass='w-full rounded-lg focus:outline-none md:w-60 md:mt-10 px-7 gap-5'
+								modClass='w-full rounded-lg focus:outline-none md:w-60  px-7 gap-5'
 								icon={<FaLocationArrow />}
 								position='right'
 							/>

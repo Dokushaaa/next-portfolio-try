@@ -20,7 +20,7 @@ const Toast = ({
 	function toastDetails({ toastDuration }: { toastDuration?: number }) {
 		setTimeout(() => {
 			dispatch(setSuccess(false));
-			console.log("setSuccess === false");
+			console.log(!store.success);
 		}, toastDuration);
 	}
 	// auto closer activator
