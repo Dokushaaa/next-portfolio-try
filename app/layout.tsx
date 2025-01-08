@@ -1,5 +1,6 @@
-import { ThemeProvider } from "@/components/theme-provider";
+// data
 import type { Metadata } from "next";
+// fonts
 import {
 	Dela_Gothic_One,
 	Fira_Code,
@@ -7,9 +8,10 @@ import {
 	Geist_Mono,
 	Gothic_A1,
 } from "next/font/google";
-
+// special
 import "./globals.css";
-import { ReduxProviders } from "@/global/redux/Provider";
+import { ThemeProvider } from "@/global/theme/theme-provider";
+import { ReduxProvider } from "@/global/helper/Provider";
 import { StoreProvider } from "@/global/store/StoreContext";
 
 const fira = Fira_Code({
@@ -51,7 +53,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${heading} ${heading2} ${fira.variable} antialiased`}>
 				{/* store */}
-				<ReduxProviders>
+				<ReduxProvider>
 					<StoreProvider>
 						{/* lightmode */}
 						<ThemeProvider
@@ -63,7 +65,7 @@ export default function RootLayout({
 							{children}
 						</ThemeProvider>
 					</StoreProvider>
-				</ReduxProviders>
+				</ReduxProvider>
 			</body>
 		</html>
 	);

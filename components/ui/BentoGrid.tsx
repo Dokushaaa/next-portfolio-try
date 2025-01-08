@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
-import { LampDemo } from "@/components/ui/Lamp";
 
 export const BentoGrid = ({
 	className,

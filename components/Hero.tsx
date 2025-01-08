@@ -18,7 +18,6 @@ const Hero = ({
 	return (
 		<>
 			{/* defines spotlights */}
-
 			<div className='py-24'>
 				<div className='spotlights-container'>
 					<Spotlight
@@ -43,7 +42,7 @@ const Hero = ({
 					/>
 				</div>
 				{/* defines  bg */}
-				<div className='h-[85vh] md:h-[65vh]  w-full bg-primary  dark:bg-grid-white/[0.07] bg-grid-black/[0.2] absolute top-0 left-0 flex items-center justify-center'>
+				<div className='h-[85vh] md:h-[65vh] lg:h-[85vh] w-full bg-primary  dark:bg-grid-white/[0.07] bg-grid-black/[0.2] absolute top-0 left-0 flex items-center justify-center'>
 					{/* Radial gradient for the container to give a faded look */}
 					<div className='absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] ' />
 				</div>
