@@ -47,3 +47,5 @@ apiKey.**
 #custom 
 /global/redux-old
 /components/functions/svg/*.svg
+/!do-not-use/*
+/components/Others.tsx

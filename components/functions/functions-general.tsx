@@ -1,5 +1,5 @@
 export const baseImgUrl = "../../../public/img";
-export const ImgUrl = "../../../public";
+export const ImgUrl = "/public";
 export const ImgUtil = "./utils";
 //const baseImgUrl = 'http://
 export const urlPathPortfolioKey = "http://localhost/next-poftolio";

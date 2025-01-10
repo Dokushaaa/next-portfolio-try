@@ -4,7 +4,7 @@ import { StoreContext } from "@/global/store/StoreContext";
 import React from "react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { MdOutlineQuestionMark } from "react-icons/md";
-import ModalWrapper from "../functions/modals/ModalWrapper";
+import ModalWrapper from "./ModalWrapper";
 
 const Toast = ({
 	type,

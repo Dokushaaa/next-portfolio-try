@@ -1,5 +1,5 @@
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
 	return (
@@ -16,7 +16,7 @@ const PageNotFound = () => {
 						className='size-[20rem] transition-all rounded-md border-2 border-gradient-to-r from-blue-500 to-purple-500'
 					/>
 					<button className='btn btn--accent'>
-						<Link to='/login'>Proceed to Login?</Link>
+						<Link href='/login'>Proceed to Login?</Link>
 					</button>
 				</div>
 			</div>

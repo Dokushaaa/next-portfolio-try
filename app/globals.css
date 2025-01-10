@@ -84,29 +84,6 @@
 		/* font-playfairB  */
 	}
 
-	h1 {
-		@apply text-4xl mb-4;
-	}
-
-	h2 {
-		@apply text-3xl mb-4;
-	}
-
-	h3 {
-		@apply text-2xl mb-2;
-	}
-
-	h4 {
-		@apply text-xl mb-4;
-	}
-
-	h5 {
-		@apply text-sm mb-2;
-	}
-	/* Paragraph */
-	p {
-		@apply mb-2 text-content !leading-6;
-	}
 	/* Tables */
 	table {
 		@apply w-full text-base font-Fira border-2 border-info dark:border-accent
@@ -139,7 +116,7 @@
 	}
 
 	#progressTop {
-		@apply fixed xl:bottom-[35px] bottom-[25px] xl:right-[35px] right-[25px] h-[70px] w-[70px] opacity-0 grid place-items-center rounded-full z-[100] cursor-pointer shadow-md;
+		@apply fixed xl:bottom-[35px] bottom-[15px] lg:bottom-[25px] xl:right-[35px] md:right-[25px] right-[10px] h-[40px] lg:h-[70px] lg:w-[70px] w-[40px] opacity-0 grid place-items-center rounded-full z-[100] cursor-pointer shadow-md;
 	}
 
 	#progressTop-value {

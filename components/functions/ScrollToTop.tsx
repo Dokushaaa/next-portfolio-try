@@ -43,7 +43,7 @@ const ScrollToTop = () => {
 			id='progressTop'
 			onClick={handleClick}>
 			<span id='progressTop-value'>
-				<FaArrowUp className='text-[25px] text-content' />
+				<FaArrowUp className='text-[15px] md:text-[25px] text-content' />
 			</span>
 		</div>
 	);

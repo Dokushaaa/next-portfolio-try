@@ -41,76 +41,7 @@ export const cardStackItems = [
 ];
 
 // grid items
-let counter = 1;
-export const gridItems = [
-	{
-		id: counter++,
-		title: "I prioritize client collaboration, fostering open communication ",
-		description: "",
-		classDescript: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-		imgClassName: "w-full h-full",
-		titleClassName: "justify-end",
-		img: "/b1.svg",
-		imgAlt: "Comrade",
-		spareImg: "",
-	},
-	{
-		id: counter++,
-		title: "I'm very flexible with time zone communications",
-		description: "",
-		classDescript: "lg:col-span-2 md:col-span-3 md:row-span-2",
-		imgClassName: "",
-		titleClassName: "justify-start",
-		img: "",
-		imgAlt: "Comrade",
-		spareImg: "",
-	},
-	{
-		id: counter++,
-		title: "My tech stack",
-		description: "I constantly try to improve",
-		classDescript: "lg:col-span-2 md:col-span-3 md:row-span-2",
-		imgClassName: "",
-		titleClassName: "justify-center",
-		img: "",
-		imgAlt: "Comrade",
-		spareImg: "",
-	},
-	{
-		id: counter++,
-		title: "Tech enthusiast with a passion for development.",
-		description: "",
-		classDescript: "lg:col-span-2 md:col-span-3 md:row-span-1",
-		imgClassName: "",
-		titleClassName: "justify-start",
-		img: "/grid.svg",
-		imgAlt: "Comrade",
-		spareImg: "/b4.svg",
-	},
 
-	{
-		id: counter++,
-		title: "Currently building a JS Animation library",
-		description: "The Inside Scoop",
-		classDescript: "md:col-span-3 md:row-span-2",
-		imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-		titleClassName: "justify-center md:justify-start lg:justify-center",
-		img: "/b5.svg",
-		imgAlt: "Comrade",
-		spareImg: "/grid.svg",
-	},
-	{
-		id: counter++,
-		title: "Do you want to start a project together?",
-		description: "",
-		classDescript: "lg:col-span-2 md:col-span-3 md:row-span-1",
-		imgClassName: "",
-		titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-		img: "",
-		imgAlt: "Comrade",
-		spareImg: "",
-	},
-];
 export const projects = [
 	{
 		id: 1,
